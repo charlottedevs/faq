@@ -20,5 +20,8 @@ If you don't see this, choose the **Pull Request** tab from the ribbon of option
     
 5. Type in a title and description for your pull request.
 
+   In the description of your pull request be sure to reference the issue you are fixing by simply typing
+   `#` followed by the issue number.
+
 
 6. Click **Create pull request**.
