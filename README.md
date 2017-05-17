@@ -1,6 +1,6 @@
 # faq
 frequently asked questions
-## How to fork a rep
+## How to fork a repo
 
 1. Create a GitHub account
 2. Navigate to the repository you'd like to fork.
