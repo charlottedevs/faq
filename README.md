@@ -28,7 +28,7 @@ If you don't see this, choose the **Pull Request** tab from the ribbon of option
 
 #### Github guides
 More detailed instructions on creating a pull request and autolinked references to urls, issues, etc, can be 
-found using at the following links:
+found at the following links:
 
 + https://help.github.com/articles/creating-a-pull-request/ 
 + https://help.github.com/articles/autolinked-references-and-urls/
