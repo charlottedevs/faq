@@ -42,3 +42,32 @@ found at the following links:
 
 + https://help.github.com/articles/creating-a-pull-request/ 
 + https://help.github.com/articles/autolinked-references-and-url
+
+## How to rebase to forked origin
+
+### Step 1 (Add the original repo as a git remote):
+
+```
+git remote add upstream https://github.com/charlottejuniordevs/client
+```
+
+### Step 2 (update git with latest in original repo):
+    
+```
+git fetch upstream
+```
+
+### Step 3 (update your branch to what's latest in original repo):
+    
+```
+git rebase upstream/master
+```
+
+To do an interactive rebase, add the `-i` flag to your command
+
+```
+git rebase -i upstream/master
+```
+
+Follow this link to the official Git documentation for more information on git-rebase:
+https://git-scm.com/docs/git-rebase
