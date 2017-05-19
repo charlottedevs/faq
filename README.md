@@ -34,8 +34,8 @@ found at the following links:
 + https://help.github.com/articles/autolinked-references-and-urls/
 
 
-## How to set up the API
-1. Before you can access the API, you need to install docker toolbox and docker-for-Mac (or whichever is appropriate for your machine)
+## How to set up the API?
+1. Before you can access the API, you need to install docker toolbox and docker-for-mac (or whichever is appropriate for your machine).
 
     https://www.docker.com/get-docker
 
@@ -45,7 +45,10 @@ touch .env
 ```
 This gives you access to the API's .env file. 
 
-3. Next you'll need to run the following:
+See [here](https://github.com/charlottejuniordevs/api/blob/development/README.md) for instructions on setting up your .env file 
+(and keep in mind that this file is required in order to fetch GitHub issues).
+
+3. Finally, you'll need to run the following:
 ```sh
   docker-compose build
   docker-compose run --rm web bin/setup
@@ -53,10 +56,15 @@ This gives you access to the API's .env file.
 ```
 This last command starts the server. You'll need to keep this running in a separate tab.
 
-4. Finally, once that is up, run the following command in a separate tab to get a JSON web token to use in Postman.
+###Sending requests to API via Postman
+Postman is a GUI platform designed to make API testing easier. If you don't already have it, you can find it [here](https://www.getpostman.com/).
+
+Once that is up, run the following command in a separate tab to get a JSON web token to use in Postman:
 ```sh 
 docker-compose run --rm web rake token
 ```
 In Postman, you will need to add a header with `Authorization` as the key and `Bearer <your-token-here>` as the value.
 
-You should also be able to go to `localhost:3000` on your computer. 
+You should now be able to send requests to `localhost:3000`.
+
+ 
