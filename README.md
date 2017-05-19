@@ -7,3 +7,6 @@ frequently asked questions
 3. In the top right corner of the page click Fork.
 
 This will give you a fork of the orginial code to edit.
+
+
+Here's the link to the documentation on GitHub: https://help.github.com/articles/fork-a-repo/
