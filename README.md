@@ -71,3 +71,36 @@ git rebase -i upstream/master
 
 Follow this link to the official Git documentation for more information on git-rebase:
 https://git-scm.com/docs/git-rebase
+
+## How to set up the API?
+1. Before you can access the API, you need to install docker toolbox and docker-for-mac (or whichever is appropriate for your machine).
+
+    https://www.docker.com/get-docker
+
+2. Once you have those installed, run the following command in your terminal:
+```sh 
+touch .env
+```
+This gives you access to the API's .env file. 
+
+See [here](https://github.com/charlottejuniordevs/api/blob/development/README.md) for instructions on setting up your .env file 
+(and keep in mind that this file is required in order to fetch GitHub issues).
+
+3. Finally, you'll need to run the following:
+```sh
+  docker-compose build
+  docker-compose run --rm web bin/setup
+  docker-compose up web 
+```
+This last command starts the server. You'll need to keep this running in a separate tab.
+
+###Sending requests to API via Postman
+Postman is a GUI platform designed to make API testing easier. If you don't already have it, you can find it [here](https://www.getpostman.com/).
+
+Once that is up, run the following command in a separate tab to get a JSON web token to use in Postman:
+```sh 
+docker-compose run --rm web rake token
+```
+In Postman, you will need to add a header with `Authorization` as the key and `Bearer <your-token-here>` as the value.
+
+You should now be able to send requests to `localhost:3000`.
