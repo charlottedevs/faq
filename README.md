@@ -1,5 +1,15 @@
 # faq
-frequently asked questions
+frequently asked question
+## How to fork a repo
+
+1. Create a GitHub account
+2. Navigate to the repository you'd like to fork.
+3. In the top right corner of the page click Fork.
+
+This will give you a fork of the orginial code to edit.
+
+
+GitHub's documentation on how to fork a repo: https://help.github.com/articles/fork-a-repo/
 
 ## How to submit a pull request from your forked repo?
 
@@ -31,8 +41,36 @@ More detailed instructions on creating a pull request and autolinked references 
 found at the following links:
 
 + https://help.github.com/articles/creating-a-pull-request/ 
-+ https://help.github.com/articles/autolinked-references-and-urls/
++ https://help.github.com/articles/autolinked-references-and-url
 
+## How to rebase to forked origin
+
+### Step 1 (Add the original repo as a git remote):
+
+```
+git remote add upstream https://github.com/charlottejuniordevs/client
+```
+
+### Step 2 (update git with latest in original repo):
+    
+```
+git fetch upstream
+```
+
+### Step 3 (update your branch to what's latest in original repo):
+    
+```
+git rebase upstream/master
+```
+
+To do an interactive rebase, add the `-i` flag to your command
+
+```
+git rebase -i upstream/master
+```
+
+Follow this link to the official Git documentation for more information on git-rebase:
+https://git-scm.com/docs/git-rebase
 
 ## How to set up the API?
 1. Before you can access the API, you need to install docker toolbox and docker-for-mac (or whichever is appropriate for your machine).
@@ -66,5 +104,3 @@ docker-compose run --rm web rake token
 In Postman, you will need to add a header with `Authorization` as the key and `Bearer <your-token-here>` as the value.
 
 You should now be able to send requests to `localhost:3000`.
-
- 
